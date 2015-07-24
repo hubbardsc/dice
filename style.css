@@ -1,0 +1,16 @@
+#button1, #button2, #button3, #button4, #button5, #button6 {
+	/*background-color : red;*/
+	display: inline-block;
+	margin: 5px;
+	margin-left: 20px;
+}
+
+#button1 {
+	margin-top: 10px;
+}
+
+#answer1, #answer2, #answer3, #answer4, #answer5, #answer6 {
+	/*background-color: blue;*/
+	display: inline-block;
+	font-size: x-large;
+}

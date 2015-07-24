@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+<title>Random Dice Generator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<script>
+	var dice4 = {
+		sides: 4,
+		roll: function () {
+			randomNumber = Math.floor(Math.random() * this.sides) + 1;
+			console.log(randomNumber);
+			var el = document.getElementById('answer1');
+        	el.innerHTML = " = " + randomNumber;
+        	document.getElementById('answer2').innerHTML = '';
+        	document.getElementById('answer3').innerHTML = '';
+        	document.getElementById('answer4').innerHTML = '';
+        	document.getElementById('answer5').innerHTML = '';
+        	document.getElementById('answer6').innerHTML = '';
+
+		}
+	}
+	var dice6 = {
+		sides: 6,
+		roll: function () {
+			randomNumber = Math.floor(Math.random() * this.sides) + 1;
+			console.log(randomNumber);
+			var el = document.getElementById('answer2');
+  			el.innerHTML = " = " + randomNumber;
+  			document.getElementById('answer1').innerHTML = '';
+        	document.getElementById('answer3').innerHTML = '';
+        	document.getElementById('answer4').innerHTML = '';
+        	document.getElementById('answer5').innerHTML = '';
+        	document.getElementById('answer6').innerHTML = '';
+		}
+	}
+
+	var dice8 = {
+		sides: 8,
+		roll: function () {
+			randomNumber = Math.floor(Math.random() * this.sides) + 1;
+			console.log(randomNumber);
+			var el = document.getElementById('answer3');
+        	el.innerHTML = " = " + randomNumber;
+        	document.getElementById('answer1').innerHTML = '';
+        	document.getElementById('answer2').innerHTML = '';
+        	document.getElementById('answer4').innerHTML = '';
+        	document.getElementById('answer5').innerHTML = '';
+        	document.getElementById('answer6').innerHTML = '';
+        }
+	}
+	var dice10 = {
+		sides: 10,
+		roll: function () {
+			randomNumber = Math.floor(Math.random() * this.sides) + 1;
+			console.log(randomNumber);
+			var el = document.getElementById('answer4');
+       		el.innerHTML = " = " + randomNumber;
+       		document.getElementById('answer1').innerHTML = '';
+       		document.getElementById('answer2').innerHTML = '';
+        	document.getElementById('answer3').innerHTML = '';
+        	document.getElementById('answer5').innerHTML = '';
+        	document.getElementById('answer6').innerHTML = '';
+		}
+	}
+	var dice12 = {
+		sides: 12,
+		roll: function () {
+			randomNumber = Math.floor(Math.random() * this.sides) + 1;
+			console.log(randomNumber);
+			var el = document.getElementById('answer5');
+	        el.innerHTML = " = " + randomNumber;
+	        document.getElementById('answer1').innerHTML = '';
+	        document.getElementById('answer2').innerHTML = '';
+	        document.getElementById('answer3').innerHTML = '';
+	        document.getElementById('answer4').innerHTML = '';
+	        document.getElementById('answer6').innerHTML = '';
+		}
+	}
+	var dice20 = {
+		sides: 20,
+		roll: function () {
+			randomNumber = Math.floor(Math.random() * this.sides) + 1;
+			console.log(randomNumber);
+			var el = document.getElementById('answer6');
+	        el.innerHTML = " = " + randomNumber;
+	        document.getElementById('answer1').innerHTML = '';
+	        document.getElementById('answer2').innerHTML = '';
+	        document.getElementById('answer3').innerHTML = '';
+	        document.getElementById('answer4').innerHTML = '';
+	        document.getElementById('answer5').innerHTML = '';
+		}
+	}
+	
+</script>
+<div class="row">
+	<div id="button1" class="col-xs-12"> 
+		
+	  <button onclick="dice4.roll();" type="button" id="d4" class="btn btn-default btn-lg">
+	  	<span class="" aria-hidden="true"></span><img src="images/d4.png"
+  		alt="d4"
+  		width="100" height="75" border="0" />
+	  </button>
+	  <span id="answer1"></span>
+	</div>
+</div>
+
+<div class="row">
+	<div id="button2" class="col-xs-12">
+	  <button onclick="dice6.roll();" type="button" id="d6" class="btn btn-default btn-lg">
+	    <span class="" aria-hidden="true"></span><img src="images/d6.png"
+  		alt="d6"
+  		width="100" height="75" border="0" />
+	  </button>
+	  <span id= "answer2"></span>
+	</div>
+</div>
+
+<div class="row">
+	<div id="button3" class="col-xs-12">
+	  <button onclick="dice8.roll();" type="button" id="d8" class="btn btn-default btn-lg">
+	  	<span class="" aria-hidden="true"></span><img src="images/d8.png"
+  		alt="d8"
+  		width="100" height="75" border="0" />
+	  </button>
+	  <span id= "answer3"></span>
+	</div>
+</div>
+
+<div class="row">
+	<div id="button4" class="col-xs-12">
+	  <button onclick="dice10.roll();" type="button" id="d10" class="btn btn-default btn-lg">
+	    <span class="" aria-hidden="true"></span><img src="images/d10.png"
+  		alt="d10"
+  		width="100" height="75" border="0" />
+	  </button>
+	  <span id= "answer4"></span>
+	</div>
+</div>
+
+<div class="row">
+	<div id="button5" class="col-xs-12">
+	  <button onclick="dice12.roll();" type="button" id="d12" class="btn btn-default btn-lg">
+		<span class="" aria-hidden="true"></span><img src="images/d12.png"
+  		alt="d12"
+  		width="100" height="75" border="0" />
+	  </button>
+	  <span id= "answer5"></span>
+	</div>
+</div>
+
+<div class="row">
+	<div id="button6" class="col-xs-12">
+	  <button onclick="dice20.roll();" type="button" id="d20" class="btn btn-default btn-lg">
+		<span class="" aria-hidden="true"></span><img src="images/d20.png"
+  		alt="d20"
+  		width="100" height="75" border="0" />
+	  </button>
+	  <span id= "answer6"></span>
+	</div>
+</div>
+</body>
