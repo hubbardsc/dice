@@ -10,26 +10,34 @@
 <body>
 
 <?php 
-$key = ["4", "6", "8", "10", "12", "20"];
-$value = ["images/d4.png", "images/d6.png", "images/d8.png", "images/d10.png", "images/d12.png", "images/d20.png"];
 
-?>	
+$array = array(
+			'4'  => 'images/d4.png',
+			'6'  => 'images/d6.png',
+			'8'  => 'images/d8.png',
+			'10' => 'images/d10.png',
+			'12' => 'images/d12.png',
+			'20' => 'images/d20.png'
+);
+
+?>
 <div class="row">
   <div class="col-md-6">
-	<div class="row">
-	  <?php foreach($array as $key=>$value){ ?>
+  	<?php foreach ($array as $key=>$value) { ?>
+	  <div class="row">
 		<div id="button" class="col-xs-6"> 
-		  <button type="button" id='<?php echo $key; ?>' class="btn btn-default btn-lg">
-			<img src="<?php echo $value; ?>" alt="d4" width="100" height="75" border="0" />
+		  <button type="button" <?php echo 'id='.$key?> class="btn btn-default btn-lg">
+			<img src=<?php echo $value ?> alt="d4" width="100" height="75" border="0" />
 		  </button>
 		</div>
-	</div>
-
-		
-	<div class="col-md-6">
-		<span id="answer"></span>
-	<div>
+	  </div>
+	<?php } ?>
+  </div>
+  <div class="col-md-6">
+	<span id="answer"></span>
+  <div>
 <div>
+
 <script>
 
 $(document).ready(function(){
